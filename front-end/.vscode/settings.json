@@ -1,0 +1,52 @@
+{
+  "nuxt.isNuxtApp": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+
+  // Prettier
+  "editor.suggest.insertMode": "replace",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Tailwind class sorting
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+
+  // Emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // Path aliasing
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // Typescript
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // files
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.next": true,
+    "**/node_modules": true
+  },
+
+  // Terminal
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.fontSize": 14
+}
