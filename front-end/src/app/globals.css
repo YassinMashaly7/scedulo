@@ -120,3 +120,151 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer base {
+  /* Typography Defaults */
+  h1 {
+    @apply scroll-m-20 text-3xl md:text-4xl font-normal tracking-tight text-balance;
+  }
+
+  h2 {
+    @apply scroll-m-20 pb-2 text-3xl font-normal tracking-tight transition-colors first:mt-0;
+  }
+
+  h3 {
+    @apply scroll-m-20 text-2xl font-normal tracking-tight;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-xl font-normal tracking-tight;
+  }
+
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-2 md:[&:not(:first-child)]:mt-4;
+  }
+
+  blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+
+  table {
+    @apply my-6 w-full overflow-y-auto;
+  }
+
+  thead tr {
+    @apply even:bg-muted m-0 border-t p-0;
+  }
+
+  th {
+    @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+
+  tbody tr {
+    @apply even:bg-muted m-0 border-t p-0;
+  }
+
+  td {
+    @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+
+  li {
+    @apply list-none;
+  }
+
+  ol {
+    @apply my-6 ml-6 list-decimal [&>li]:mt-2;
+  }
+
+  code {
+    @apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
+
+  small {
+    @apply text-sm leading-none font-medium;
+  }
+
+  /* Link styles */
+  /* a {
+    @apply text-primary text-sm font-medium underline-offset-4;
+  } */
+
+  .nav-link {
+    @apply text-muted-foreground hover:text-foreground font-normal no-underline transition-colors;
+  }
+
+  /* Lead paragraph style - can be applied with a class */
+  .lead {
+    @apply text-muted-foreground text-base md:text-lg;
+  }
+
+  /* Large text style - can be applied with a class */
+  .large {
+    @apply text-lg font-semibold;
+  }
+
+  /* Muted text style - can be applied with a class */
+  .muted {
+    @apply text-muted-foreground text-sm;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-fit px-8;
+  }
+  .container-xs {
+    @apply mx-auto w-full max-w-xs px-8;
+  }
+  .container-sm {
+    @apply mx-auto w-full max-w-sm px-8;
+  }
+  .container-md {
+    @apply mx-auto w-full max-w-md px-8;
+  }
+  .container-lg {
+    @apply mx-auto w-full max-w-lg px-8;
+  }
+  .container-xl {
+    @apply mx-auto w-full max-w-xl px-8;
+  }
+  .container-2xl {
+    @apply mx-auto w-full max-w-2xl px-8;
+  }
+  .container-3xl {
+    @apply mx-auto w-full max-w-3xl px-8;
+  }
+  .container-4xl {
+    @apply mx-auto w-full max-w-4xl px-8;
+  }
+  .container-5xl {
+    @apply mx-auto w-full max-w-5xl px-8;
+  }
+  .container-6xl {
+    @apply mx-auto w-full max-w-6xl px-8;
+  }
+  .container-7xl {
+    @apply mx-auto w-full max-w-7xl px-8;
+  }
+}
+
+/* Scrollbar Styles */
+.scroll-container {
+  overflow-y: scroll;
+  position: relative;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 4px; /* adds top/bottom spacing */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
