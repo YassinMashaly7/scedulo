@@ -10,7 +10,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
-import { SidebarGroup } from "@/config/dashboard/dasboard-sidebar.config";
+import { SidebarGroup } from "@/types/dashboard/dashboard-sidebar.types";
 import Link from "next/link";
 
 interface NavMainProps {
